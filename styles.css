@@ -93,6 +93,7 @@ main {
     rgba(255, 255, 255, 0.2)
   );
   border-radius: 2rem;
+  padding: 2rem;
 }
 
 .link {
@@ -153,7 +154,7 @@ main {
 
 .card {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   background: linear-gradient(
     to left top,
@@ -170,9 +171,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  margin-left: 2rem;
 }
 
-.progress {
+/* .progress {
   background: linear-gradient(to right top, #d96fe7, #f19346);
   width: 100%;
   height: 25%;
@@ -192,11 +195,42 @@ main {
   );
   position: absolute;
   left: 60%;
+} */
+
+.progress {
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+  border-radius: 1rem;
+  /* box-shadow: inset 0 0 10px rgb(136, 136, 136); */
+  position: relative;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right top, #d96fe7, #f19346);
+  animation: animate 3s ease-in-out forwards;
 }
 
 .percentage {
+  margin-left: auto;
   font-weight: bold;
   background: linear-gradient(to right top, #d96fe7, #f19346);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+  from {
+    width: 0;
+  }
 }
